@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="refresh" content="11;url=https://jwpe120.github.io/P7wQBekg5AHWDvF-/umum/index">
-    <title>Futuristic Countdown</title>
+    <title>404 Not Found</title>
     <style>
         /* Styling for the countdown and button */
         body {
@@ -20,24 +20,23 @@
             margin-top: 50px;
         }
 
-        .neon-button {
-            background-color: #00ff00;
-            color: black;
+        .button {
+            display: block;
+            margin: 0 auto;
+            width: 200px;
+            height: 50px;
             border: none;
-            padding: 10px 20px;
-            font-size: 16px;
+            border-radius: 10px;
+            font-size: 25px;
             font-weight: bold;
-            border-radius: 5px;
-            cursor: pointer;
-            animation: blink 1s infinite alternate;
+            background: linear-gradient(to right, magenta, cyan); /* Warna neon */
+            animation: blink 1s infinite; /* Animasi berkedip */
         }
 
+        /* Membuat keyframes untuk animasi berkedip */
         @keyframes blink {
-            0% {
-                opacity: 1;
-            }
-            100% {
-                opacity: 0.5;
+            50% {
+                opacity: 0; /* Membuat tombol tidak terlihat */
             }
         }
     </style>
@@ -67,8 +66,10 @@
     </script>
 </head>
 <body onload="startCountdown()">
+    <h1>Anda akan dialihkan dalam waktu</h1>
     <div class="countdown" id="countdown">10</div>
-    <p>If you are not redirected, click the button below:</p>
-    <button class="neon-button" onclick="window.location.href='https://jwpe120.github.io/P7wQBekg5AHWDvF-/umum/index'">Go to Link</button>
+    <p>Mohon maaf halaman yang ingin anda kunjungi sudah tidak ada lagi. Anda akan di alihkan ke url baru untuk website resmi JWP Entertainment
+    Secara otomatis atau klik tombol "Go to Link" untuk mempercepat waktu. </p>
+    <button class="button" onclick="window.location.href='https://jwpe120.github.io/P7wQBekg5AHWDvF-/umum/index'">Go to Link</button>
 </body>
 </html>
