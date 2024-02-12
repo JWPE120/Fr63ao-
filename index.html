@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="refresh" content="11;url=https://jwpe120.github.io/P7wQBekg5AHWDvF-/umum/index">
+    <title>Futuristic Countdown</title>
+    <style>
+        /* Styling for the countdown and button */
+        body {
+            background-color: black;
+            color: white;
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+
+        .countdown {
+            font-size: 24px;
+            font-weight: bold;
+            margin-top: 50px;
+        }
+
+        .neon-button {
+            background-color: #00ff00;
+            color: black;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            font-weight: bold;
+            border-radius: 5px;
+            cursor: pointer;
+            animation: blink 1s infinite alternate;
+        }
+
+        @keyframes blink {
+            0% {
+                opacity: 1;
+            }
+            100% {
+                opacity: 0.5;
+            }
+        }
+    </style>
+    <script>
+        // Function to update the countdown display
+        function updateCountdown(count) {
+            document.getElementById("countdown").textContent = count;
+        }
+
+        // Function to start the countdown
+        function startCountdown() {
+            let count = 10; // Initial countdown value
+            updateCountdown(count); // Display initial value
+
+            // Update countdown every second
+            const countdownInterval = setInterval(() => {
+                count--;
+                updateCountdown(count);
+
+                // Stop countdown when it reaches 0
+                if (count === 0) {
+                    clearInterval(countdownInterval);
+                    window.location.href = "https://jwpe120.github.io/P7wQBekg5AHWDvF-/umum/index";
+                }
+            }, 1000);
+        }
+    </script>
+</head>
+<body onload="startCountdown()">
+    <div class="countdown" id="countdown">10</div>
+    <p>If you are not redirected, click the button below:</p>
+    <button class="neon-button" onclick="window.location.href='https://jwpe120.github.io/P7wQBekg5AHWDvF-/umum/index'">Go to Link</button>
+</body>
+</html>
