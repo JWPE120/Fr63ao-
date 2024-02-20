@@ -59,17 +59,30 @@
                 // Stop countdown when it reaches 0
                 if (count === 0) {
                     clearInterval(countdownInterval);
-                    window.location.href = "https://jwpe120.github.io/P7wQBekg5AHWDvF-/umum/index";
+                    redirectToNewURL(); // Call function to redirect to new URL
                 }
             }, 1000);
+        }
+
+        // Function to check the OS and redirect accordingly
+        function redirectToNewURL() {
+            var userAgent = navigator.userAgent.toLowerCase();
+            if (userAgent.match(/android/i)) {
+                window.location.href = "https://jwpe120.github.io/P7wQBekg5AHWDvF-/umum/index2"; // Change this to your desired URL for Android devices
+            } else if (userAgent.match(/iphone|ipad|ipod/i)) {
+                window.location.href = "https://jwpe120.github.io/P7wQBekg5AHWDvF-/umum/index2"; // Change this to your desired URL for iOS devices
+            } else if (userAgent.match(/blackberry/i)) {
+                window.location.href = "https://jwpe120.github.io/P7wQBekg5AHWDvF-/umum/index2"; // Change this to your desired URL for BlackBerry devices
+            } else {
+                window.location.href = "https://jwpe120.github.io/P7wQBekg5AHWDvF-/umum/index"; // Default URL for other devices
+            }
         }
     </script>
 </head>
 <body onload="startCountdown()">
     <h1>Anda akan dialihkan dalam waktu</h1>
     <div class="countdown" id="countdown">10</div>
-    <p>Mohon maaf halaman yang ingin anda kunjungi sudah tidak ada lagi. Anda akan di alihkan ke url baru untuk website resmi JWP Entertainment
-    Secara otomatis atau klik tombol "Go to Link" untuk mempercepat waktu. </p>
-    <button class="button" onclick="window.location.href='https://jwpe120.github.io/P7wQBekg5AHWDvF-/umum/index'">Go to Link</button>
+    <p>Mohon maaf halaman yang ingin anda kunjungi sudah tidak ada lagi. Anda akan di alihkan ke url baru untuk website resmi JWP Entertainment Secara otomatis atau klik tombol "Go to Link" untuk mempercepat waktu. </p>
+    <button class="button" onclick="redirectToNewURL()">Go to Link</button>
 </body>
 </html>
